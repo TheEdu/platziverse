@@ -4,7 +4,8 @@
   "description": "A Simple IoT Platform - DB Module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint .",
+    "fix": "./node_modules/.bin/eslint --fix ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/TheEdu/platziverse/issues"
   },
-  "homepage": "https://github.com/TheEdu/platziverse#readme"
+  "homepage": "https://github.com/TheEdu/platziverse#readme",
+  "devDependencies": {
+    "standart": "^6.1.0"
+  }
 }
