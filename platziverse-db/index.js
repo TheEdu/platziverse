@@ -12,8 +12,12 @@ module.exports = async function (config) {
   AgentModel.hasMany(MetricModel)
   MetricModel.belongsTo(AgentModel)
 
-  await sequelize.authenticate()
-  // sequelize.sync()
+  await sequelize.authenticate() // Verifica la conexion con la DB
+  // sequelize.sync() // Inicializa la DB con los modelos y las relaciones definidas
+
+  if (config.setup) {
+    await sequelize.sync({ force: true }) // Crea la base de datos (si la base existe la pisa)
+  }
 
   const Agent = {}
   const Metric = {}
