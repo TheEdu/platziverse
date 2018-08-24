@@ -27,7 +27,6 @@ async function setup () {
     host: process.env.DB_HOST || 'localhost',
     dialect: 'postgresql',
     logging: s => debug(s), // Llamo al modulo de debug instalado para hacer el logging
-    operatorsAliases: false,
     setup: true
   }
 
